@@ -66,6 +66,20 @@ body {
   margin-left: 10px;
 }
 
+.info-content {
+  text-align: left;
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #fcff70;
+}
+
 .journal-container {
     display: flex;
     flex-direction: row;
@@ -81,6 +95,7 @@ body {
     margin-right: 10px;
     margin-left: 10px;   
 }
+
 .journal-container {
     display: flex;
     justify-content: center;
@@ -99,8 +114,31 @@ body {
     height: auto;
 }
 
-@media only screen and (max-width: 600px) {
 
+.fade-paragraph {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.faded-in {
+  opacity: 1;
+}
+
+.quote {
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 32px;
+  font-style: italic;
+  color: #fcff70;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
   .navbar {
     position: static;
     width: 100%;
@@ -112,5 +150,4 @@ body {
   .navbar a {
     font-size: 10px;
   }
-
 }
