@@ -1,3 +1,27 @@
+let currentIndex = 0;
+
+function showTestimonial(index) {
+  const testimonials = document.querySelectorAll(".testimonial");
+  testimonials.forEach((testimonial) => 
+  testimonial.classList.remove("active"));
+  testimonials[index].classList.add("active");
+}
+
+function changeTestimonial(direction) {
+  currentIndex += direction;
+
+  const testimonials = document.querySelectorAll(".testimonial");
+  if (currentIndex >= testimonials.length) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = testimonials.length - 1;
+  }
+
+  showTestimonial(currentIndex);
+}
+
+showTestimonial(currentIndex);
+
 const commentSection = [
   { 
     name: "Odrunia, Mark", 
@@ -98,3 +122,4 @@ function sortComments() {
 
   displayComments();
 }
+

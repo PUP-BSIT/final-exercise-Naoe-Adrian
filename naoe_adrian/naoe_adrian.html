@@ -1,395 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-      <title>naoe adrian</title>
-      <link rel="icon" href="../img/vrzn.png" type="img/x-icon">
-   </head>
-   <body>
-      <div class="title-container">     
-         <h1>Hola, I'm Naoe, Adrian</h1>
-      </div>
-      <div class="profile-body">
-      <div class="photo">
-         <img src="./img/2by2naoe.jpg"
-              class="image-cover">
-      </div>
-      <div class="profile">
-         <div id="profile_div">
-         </div>
-         <h1 class="username">Naoe, Adrian</h1>
-         <h2 class="profession"> Student @ PUP-TAGUIG</h2>
-         <h3 class="location-name">
-            <h4 class="location-name">Muntinlupa City</h4> 
-         </h3>
-         <p class="description">
-            I'm Adrian Naoe, currently pursuing a BSIT degree at 
-            PUP Taguig in my third year. 🎓 I'm passionate about 
-            music 🎶, art 🎨, and technology 💻. Right now, I'm 
-            immersed in the world of programming 🖥️, and although 
-            it can be challenging at times, 
-            I'm confident that I'll successfully complete 
-            this journey on schedule. 🚀
-         </p>
-      </div>
-      <div class="hobbies-container">
-         <h2>My Interest and hobbies</h2>
-         <ul role="list" >
-            <li class="hobby-1">
-               <img 
-                  src="./img/microphone.jpg" 
-                  alt="Rapping Image"> 
-               <strong>RAPPING</strong>
-               <p>
-                  I have a deep passion for writing rap songs, 
-                  a passion that ignited during my senior year 
-                  in high school. Hip-hop music has always resonated 
-                  with me, and the influence of numerous foreign 
-                  artists inspired me to create my own tracks
-               </p>
-            </li>
-            <li>
-               <img 
-                  src="./img/colorgrading.jpg" 
-                  alt="Color Grading Image"> 
-               <strong>PHOTO EDITING</strong> 
-               <p>
-                  Manipulating img has always fascinated me. 
-                  The process of using tools like Canva, Photoshop, 
-                  and AI editors to transform images into stunning 
-                  works of art gives me an exhilarating sense of 
-                  accomplishment. I particularly enjoy applying color 
-                  grading techniques to breathe life into my photographs.
-               </p>
-            </li>
-            <li>
-               <img 
-                  src="./img/videoedit.jpg" 
-                  alt="Color Grading Image"> 
-               <strong>VIDEO EDITING</strong>
-               <p> 
-                  My interest in video editing began in high school, 
-                  thanks to the inspiration from my brother. 
-                  I frequently use software like Filmora and After Effects 
-                  during my free time. One of my favorite effects to 
-                  incorporate is the VHS retro effect, 
-                  which adds a nostalgic touch to my projects.
-               </p>
-            </li>
-            <li>
-               <img 
-                  src="./img/poemwriting.jpg" 
-                  alt="Color Grading Image"> 
-               <strong>WRITING POEMS</strong>  
-               <p>
-                  Poems hold a special place in my heart. 
-                  Through the art of crafting words with 
-                  rhyme and rhythm, I find an outlet to express 
-                  my emotions, whether they are positive or negative. 
-                  In the end, I believe this creative pursuit 
-                  helps me create a unique form of art.
-               </p>
-            </li>
-            <li>
-               <img 
-                  src="./img/coding.jpg" 
-                  alt="Color Grading Image"> 
-               <strong>CODING</strong> 
-               <p>
-                  While I may not consider myself a proficient coder, 
-                  I draw inspiration from countless professional coders. 
-                  I admit that I grapple with the complexities of logic, 
-                  but as the saying goes, 'no pain, no gain.' I continue 
-                  to code and learn, aspiring to join the ranks of skilled 
-                  programmers someday.
-               </p>
-            </li>
-         </ul>
-      </div>
-      <div class="my-works-container">
-         <h2>MY WORKS</h2>
-         <ol class="project-list">
-            <li>
-               <a href="./countries/index.html" target="_blank">
-                  Countries of the World 🌎
-               </a>
-            </li>
-            <li>
-               <a href="./rest-album-rest/index.html" target="_blank">
-                  Album REST API 💿
-               </a>      
-            </li>
-            <li>
-               <a href="#">
-                  Rhyme Generator PHP & HTML
-               </a>
-            </li>
-            <li>
-               <a href="#">
-                  Float-Man Game Development
-               </a>
-            </li>
-            <li>    
-               <a href="#">
-                  Canteen Canteen-Management-System
-               </a>
-            </li>
-         </ol>
-      </div>
-      <div class="testimonials">
-      <section class="testimonials">
-         <h2>TESTIMONIALS</h2>
-         <div class="full-boxer">
-            <div class="comment-box">
-               <div class="box-top">
-                  <div class="profile-tetimonials">
-                     <div class="profile-image">
-                        <img 
-                           src="./img/Dimasacat.jpg" 
-                           alt="Dimasacat, Andronicus R">
-                     </div>
-                     <div class="name">
-                        <strong>Dimasacat, Andronicus R</strong>
-                        <span>@DimasacatAndro</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="comment">
-                  <p>
-                     Adrian's IT skills are simply outstanding. 
-                     He's the tech genius everyone needs in their 
-                     corner!
-                  </p>
-               </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>naoe-folio</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./naoe_adrian.html" class="navbar-link">About</a>
+            <a href="./pages/works.html" class="navbar-link">Works</a>
+            <a href="#" class="navbar-link">Certificate</a>
+            <a href="./pages/race.html" class="navbar-link">My Race</a>
+        </div>
+        <div class="info-container">
+            <figure class="avatar-box">
+                <img src="./assets/images/adrian.png" alt="Adrian Naoe" />
+            </figure>
+            <div class="info-content">
+                <h1 class="name" title="Adrian Naoe">Adrian Naoe</h1>
+                <p class="title">Aspiring Cyber Security</p>
             </div>
-            <div class="comment-box">
-               <div class="box-top">
-                  <div class="profile-tetimonials">
-                     <div class="profile-image">
-                        <img src="./img/Go.jpg" 
-                           alt= "Go, Christian Harrel Y">
-                     </div>
-                     <div class="name">
-                        <strong>Go, Christian Harrel Y</strong>
-                        <span>@go-chrisitianharrel</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="comment">
-                  <p>
-                     Naoe, your creativity and attention 
-                     to detail shine through in every project, 
-                     and I feel lucky to work alongside such a 
-                     gifted group of individuals. Keep up the 
-                     fantastic work!
-                  </p>
-               </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon-box">
+                        <img src="./assets/icons/envelope-regular.svg" 
+                             alt="envelop-icon">
+                    </div>
+                    <div class="contact-detail">
+                        <p class="contact-title">Email</p>
+                        <a href="mailto:adriannaoe7@gmail.com" 
+                           class="contact-link"> adriannaoe7@gmail.com 
+                       </a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box">
+                        <img src="./assets/icons/compass-regular.svg" 
+                             alt="compass-icon">
+                    </div>
+                    <div class="contact-detail">
+                        <p class="contact-title">Location</p>
+                        <address>Poblacion, Muntinlup City</address>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box">
+                        <img src="./assets/icons/graduation-cap.svg" 
+                             alt="graduation-icon">
+                    </div>
+                    <div class="contact-detail">
+                        <p class="contact-title">University</p>
+                        <p class="contact-link">PUP-TAGUIG</p>
+                    </div>
+                </div>
             </div>
-        </section>
-      <div class="full-boxer">
-         <div class="comment-box">
-            <div class="box-top">
-               <div class="profile-tetimonials">
-                  <div class="profile-image">
-                     <img src="./img/Galope.jpg" 
-                        alt="Galope, Jhean Khendrick C">
-                  </div>
-                  <div class="name">
-                     <strong>Galope, Jhean Khendrick C</strong>
-                     <span>@GalopeJhean</span>
-                  </div>
-               </div>
-            </div>
-            <div class="comment">
-               <p>
-                  Adrian is one of the most hardworking 
-                  person in this planet. His relentless 
-                  commitment to his goals sets an exemplary 
-                  standard for everyone around him.
-               </p>
-            </div>
-         </div>
-         <div class="comment-box">
-            <div class="box-top">
-               <div class="profile-tetimonials">
-                  <div class="profile-image">
-                     <img src="./img/Odrunia.jpg" 
-                        alt="Odrunia, Mark Ryan J">
-                  </div>
-                  <div class="name">
-                     <strong>Odrunia, Mark Ryan</strong>
-                     <span>@OdruniaMark</span>
-                  </div>
-               </div>
-            </div>
-            <div class="comment">
-               <p>
-                  Adrian brings an unparalleled 
-                  level of dedication, expertise, and 
-                  creativity to our projects, 
-                  his attention to detail is second to none. 
-               </p>
-            </div>
-         </div>
-         </section>
-      </div>
-      </div>
-      <section class="gallery">
-         <h2>MY GALLERY</h2>
-         <div class="slider-wrapper">
-            <p>
-               These snapshots are treasures to me, bearing 
-               the weight of dear friends and loved ones who've 
-               been my rock and foundation. They serve as a 
-               cornerstone, fortifying my self-worth and unyielding 
-               spirit through the harshest of trials.My gratitude 
-               to God overflows for gifting me with these incredible 
-               companions who've stood by me unwaveringly 
-               throughout my voyage.
-            <p>
-            <div class="slider">
-               <img id="slide_1" 
-                  src="./img/naoe-pic.jpg" 
-                  alt="Adrian naoe stolen picture" />
-               <img id="slide_2" 
-                  src="./img/group-pic-12jpg.jpg" 
-                  alt="BSIT 3-1 Friends Group Picture" />
-               <img id="slide_3" 
-                  src="./img/group-pic-11.jpg"
-                  alt="Teknikal Team Group Picture" />
-               <img id="slide_4" 
-                  src="./img/group-pic-3.jpg" 
-                  alt="Andronicus birthday celebartion" />
-               <img id="slide_5" 
-                  src="./img/group-pic-1.jpg" 
-                  alt="BSIT 3-1 Groupic" />
-            </div>
-            <div class="slider-nav">
-               <a href="#slide_1"></a>
-               <a href="#slide_2"></a>
-               <a href="#slide_3"></a>
-               <a href="#slide_4"></a>
-               <a href="#slide_5"></a>
-            </div>
-         </div>
-      </section>
-      <div class="goals-container">
-      <h2>MY GOALS</h2>
-      <div class="full-boxer">
-      <div class="goal-description">
-         <div class="box-top">
-            <div class="profile-goals">
-               <div class="profile-image">
-                  <img 
-                     src="./img/toga.jpg" 
-                     alt="a picture of a toga">
-               </div>
-               <div class="name">
-                  <h4>
-                     <em>Finish my Degree</em>
-                  </h4>
-               </div>
-            </div>
-         </div>
-         <div class="desc-goal">
+        </div>
+        <div class="about-me">
+            <h2>About Me</h2>
             <p> 
-               I'm on this journey with you, striving to complete my 
-               BSIT degree. Let me share this with you, fam, hard work 
-               is the foundation of success, and we can't afford to 
-               give up. I'm pursuing this to give back to my family 
-               and friends, and I'm confident that our determination 
-               and hustle will carry us through. So, let's stay 
-               committed, keep learning, and when we cross that 
-               finish line, it's all about giving 
-               back to our loved ones. 
+                I'm Adrian Naoe, currently pursuing a BSIT degree at PUP 
+                Taguig in my third year. 🎓 I'm passionate about music 🎶, 
+                art 🎨, and technology 💻. Right now, I'm immersed in the 
+                world of programming 🖥️, and although it can be challenging 
+                at times, I'm confident that I'll successfully complete this 
+                journey on schedule. 🚀 
             </p>
-         </div>
-      </div>
-      <div class="full-boxer">
-      <div class="goal-description">
-         <div class="box-top">
-            <div class="profile-goals">
-               <div class="profile-image">
-                  <img 
-                     src="./img/microphone.2jpg.jpg" 
-                     alt="a picture of a microphone">
-               </div>
-               <div class="name">
-                  <h4>
-                     <em>Pursue My Rap Career</em>
-                  </h4>
-               </div>
+            <h2>What I'm Doing</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>
+                        <img src="./assets/icons/wand-magic.svg" 
+                             alt="wand-icon"> 
+                             Editing
+                    </h3>
+                    <p> 
+                        My passion for video editing ignited in high 
+                        school, influenced by my brother, and I enjoy 
+                        using tools like Filmora and After Effects, with 
+                        a fondness for the nostalgic VHS retro effect. 
+                        Additionally, I find immense satisfaction in 
+                        manipulating images using Canva, Photoshop, 
+                        and AI editors. 
+                   </p>
+                </div>
+                <div class="skill">
+                    <h3>
+                        <img src="./assets/icons/sliders-solid.svg" 
+                             alt="wand-icon"> 
+                             Audio Mixing
+                    </h3>
+                    <p> 
+                        Started spittin bars' in high school, realized 
+                        the importance of clean vocals. Now, I'm all 
+                        about that audio mixing grind, making sure my 
+                        rhymes hit hard and clear through the speakers. 
+                   </p>
+                </div>
+                <div class="skill">
+                    <h3>
+                        <img src="./assets/icons/code-solid.svg" 
+                             alt="code-icon"> 
+                             Coding
+                    </h3>
+                    <p> 
+                        Struggling with logic, but embracing the "no pain, 
+                        no gain" mantra. Coding and learning persistently, 
+                        aiming to become a skilled programmer. 
+                   </p>
+                </div>
+                <div class="skill">
+                    <h3>
+                        <img src="./assets/icons/microphone.svg" 
+                             alt="mic-icon"> 
+                             Rapping
+                    </h3>
+                    <p> 
+                        I have a deep passion for writing rap songs, 
+                        a passion that ignited during my senior year 
+                        in high school. Hip-hop music has always 
+                        resonated with me, and the influence of numerous 
+                        foreign artists inspired me to create my own tracks 
+                   </p>
+                </div>
             </div>
-         </div>
-         <div class="desc-goal">
-            <p> 
-               I'm pushing hard in college, and I'm not giving up on 
-               my rap dreams. I believe you can chase your passion 
-               while getting an education. Watch out, 'cause I'm 
-               going to make my mark in the rap game while 
-               earning that degree. It's about balancing 
-               education and pursuing my dreams, and I'm all in. 
-            </p>
-         </div>
-      </div>
-      <div class="full-boxer">
-         <div class="goal-description">
-            <div class="box-top">
-               <div class="profile-goals">
-                  <div class="profile-image">
-                     <img 
-                        src="./img/cyber.jpg" 
-                        alt="a photo of cyber Security poster">
-                  </div>
-                  <div class="name">
-                     <h4>
-                        <em>Be a Cyber Security</em>
-                     </h4>
-                  </div>
-               </div>
+            <div class="testimonial-container">
+                <h2>Testimonial</h2>
+                <div class="testimonial active">
+                    <div class="profile-picture">
+                        <img src="./assets/images/andro.png" alt="andro-pic">
+                    </div>
+                    <div class="text-content">
+                        <h3>Dimasacat, Andronicus R.</h3>
+                        <blockquote> 
+                           "Adrian's IT skills are simply 
+                           outstanding. He's the tech genius everyone needs 
+                           in their corner!" 
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="profile-picture">
+                        <img src="./assets/images/harr.png" alt="harrel-pic">
+                    </div>
+                    <div class="text-content">
+                        <h3>Go, Christian Harrel Y.</h3>
+                        <blockquote> 
+                           "Naoe, your creativity and attention to detail 
+                            shine in through in every project, and I feel 
+                            lucky to work alongside such a gifted group of 
+                            individuals. Keep up the fantastic work!" 
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="profile-picture">
+                        <img src="./assets/images/jhean.png" alt="jhean-pic">
+                    </div>
+                    <div class="text-content">
+                        <h3>Galope, Jhean Khendrick C.</h3>
+                        <blockquote> 
+                           "Outstanding work! They delivered on 
+                            time and exceeded our project requirements." 
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="profile-picture">
+                        <img src="./assets/images/mark.png" alt="mark-pic">
+                    </div>
+                    <div class="text-content">
+                        <h3>Odrunia, Mark Ryan</h3>
+                        <blockquote> 
+                           "Adrian brings an unparalleled level of 
+                            dedication, expertise, and creativity to our 
+                            projects, his attention to detail 
+                            is second to none" 
+                        </blockquote>
+                    </div>
+                </div>
+                <button id="prev_btn" 
+                        onclick="changeTestimonial(-1)"> 
+                        Previous 
+                </button>
+                <button id="next_btn" 
+                        onclick="changeTestimonial(1)"> 
+                        Next 
+               </button>
             </div>
-            <div class="desc-goal">
-               <p> 
-                  I've got some big dreams beyond the mic. 
-                  I'm talking about diving into the world 
-                  of cybersecurity. Just like in my music, 
-                  I'm all about protecting what's valuable. 
-                  So, I'm preparing myself to safeguard digital 
-                  landscapes and information. It's a new path, 
-                  but my determination is unwavering, and
-                  I'm ready to make a positive impact in the 
-                  tech world, just like I did in the rap game. 
-               </p>
-            </div>
-         </div>
-      </div>
-      <section>
-         <div id="comment_form">
+        </div>
+        <div id="comment_form">
             <h1>COMMENTS</h1>
             <div id="comments_dynamic"></div>
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter Your Name" />
             <label for="comment">Comment:</label>
-            <textarea
-               id="comment"
-               rows="4"
-               placeholder="What's on your mind?"
-               required
-               ></textarea>
-            <button id="add_comment_btn" onclick="addComment()" disabled>
-               Add Comment
+            <textarea id="comment" 
+                      rows="4" 
+                      placeholder="What's on your mind?" 
+                      required></textarea>
+            <button id="add_comment_btn" 
+                    onclick="addComment()" 
+                    disabled> 
+                    Add Comment 
             </button>
             <div id="sort_option">
-               <label for="sort"></label>
-               <select id="sort" onchange="sortComments()">
-                  <option value="initial">Sort Initially</option>
-                  <option value="newest">New to Old</option>
-                  <option value="oldest">Old to New</option>
-               </select>
+                <label for="sort"></label>
+                <select id="sort" onchange="sortComments()">
+                    <option value="initial">Sort Initially</option>
+                    <option value="newest">New to Old</option>
+                    <option value="oldest">Old to New</option>
+                </select>
             </div>
-         </div>
-      <script src="./script.js"></script>
-   </body>
+            <script src="script.js"></script>
+    </body>
 </html>
