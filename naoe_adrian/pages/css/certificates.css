@@ -140,7 +140,7 @@ body {
   color: #f2f2f2;
 }
 
-.my-works {
+.my-certificates {
   color: white;
   background-color: #1e1e1f;
   display: flex;
@@ -156,81 +156,30 @@ body {
   margin-bottom: 70px;
 }
 
-.my-works h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.my-certificates {
+  margin-top: 20px;
 }
 
-.my-works p {
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.container {
+.certificates-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.card {
-  background-color: #212529;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 80%;
-  max-width: 700px;
-  position: relative;
-  animation: slide-up 1s ease-in-out;
-}
-
-.my-works-container {
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  justify-content: space-around;
+  gap: 45px;
 }
 
-.work-item {
-  max-width: 250px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-}
-
-.work-item img {
+.certificate-item img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  border: 1px solid #383838;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-.work-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 8px;
-}
-
-.work-item:hover .overlay {
-  opacity: 1;
-}
-
-.work-item h3, .work-item p ,a{
+.certificate-item p,
+a {
+  color: #ffdb70;
   text-decoration: none;
-  color: #fff;
-  margin: 0;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -244,22 +193,12 @@ body {
     flex-wrap: wrap;
   }
 
-  .contact-info{
+  .contact-info {
     flex-wrap: wrap;
   }
 
-  .contact-item{
+  .contact-item {
     font-size: 13px;
-  }
-
-  .my-works{
-    max-width: 100%;
-
-  }
-
-  .my-works-container{
-   align-items: center;
-
   }
 
   .navbar {
@@ -268,5 +207,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
+  }
+  
+  .navbar a {
+    font-size: 10px;
   }
 }
