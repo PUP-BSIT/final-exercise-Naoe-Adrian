@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ALBUM MENTOR</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="info-container">
+		<h1>WELCOME TO ALBUMENTOR</h1>
+		<p>Explore the world of music with my Album Details API! 🎵✨</p>
+		<p>
+			Discover information about your favorite albums,
+			including details such as album name,
+			main artist, genre, and language.
+		</p>
+	</div>
+	<form id="album_form">
+		<label for="album_name">Album Title:</label>
+		<input 
+			type="text" 
+			id="album_name" 
+			placeholder="Enter Album Title" 
+			required />
+		<label for="artist">Main Artist:</label>
+		<input 
+			type="text" 
+			id="artist" 
+			placeholder="Enter Main Artist" 
+			required />
+		<label for="language">Language:</label>
+		<select id="language" required>
+			<option value="TAGALOG">Tagalog</option>
+			<option value="ENGLISH">English</option>
+			<option value="KOREAN">Korean</option>
+			<option value="ESPAÑOL">Spanish</option>
+			<option value="OTHERS">Other</option>
+		</select>
+		<label for="num_tracks">Number of Tracks:</label>
+		<input 
+			type="number" 
+			id="num_tracks" 
+			placeholder="Enter Number of Tracks" 
+			required />
+		<input type="hidden" id="album_id" />
+		<label for="genre">Genre:</label>
+		<select id="genre" required>
+			<option value="POP">Pop</option>
+			<option value="ROCK">Rock</option>
+			<option value="HIP-HOP">Hip Hop</option>
+			<option value="K-POP">K-Pop</option>
+			<option value="OPM">OPM</option>
+			<option value="OTHERS">Others</option>
+		</select>
+		<button 
+			type="button" 
+			onclick="createAlbum()" 
+			id="submit_button" 
+			disabled>
+			Create
+		</button>
+	</form>
+	<h2>Album List</h2>
+	<div class="table-container">
+		<table id="album_table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Album Name</th>
+					<th>Main Artist</th>
+					<th>Language</th>
+					<th>Number of Tracks</th>
+					<th>Genre</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="album_table_body"></tbody>
+		</table>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>

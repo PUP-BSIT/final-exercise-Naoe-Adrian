@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", Courier, monospace;
+}
+
+body {
+  background-color: #03001c;
+  color: white;
+}
+
+label {
+  font-size: 25px;
+}
+
+.info-container {
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  padding: 8px;
+  background-color: #8f2cd3;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #ddd;
+}
+
+p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 8px;
+}
+
+label {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.search-input {
+  font-size: auto;
+  margin: 0 auto;
+  width: 65%;
+  height: 45px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 16px;
+  margin: 0 auto;
+  width: 40%;
+  background-color: #41ead4;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.details-container {
+  flex: 1;
+  background-color: #280944;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.details-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #21063a;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.country-card:hover {
+  transform: scale(1.05);
+}
+
+.country-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.other-countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.other-countries-container h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+#main_container,
+#result_container {
+  display: flex;
+}

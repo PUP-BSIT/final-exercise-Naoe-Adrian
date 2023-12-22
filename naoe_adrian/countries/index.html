@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+   <title>Countries of the World</title>
+   <link rel="stylesheet" href="./style-countries.css" />
+</head>
+<body>
+   <div class="info-container">
+      <h1>WELCOME TO COUNTRIES!</h1>
+      <p>Explore the diverse world of countries with our Countries
+         API! 🌍✨
+      </p>
+      <p> Discover fascinating details about each country, from
+         capitals to populations, languages to regions. 
+      </p>
+      <p> To get started, simply enter the name of a country in the
+         search bar above, click 'Search,' and dive into a world of
+         information! 
+      </p>
+   </div>
+   <div class="container" id="main_container"> 
+      <label for="search_input">Enter a country:</label> 
+         <input type="text" 
+                id="search_input" 
+                class="search-input"
+                placeholder="Example: Philippines" /> 
+         <button onclick="searchCountry()"
+                 class="search-button">Search
+         </button> 
+   </div>
+   <div class="container" id="result_container">
+      <div id="country_details" class="details-container">
+         <span>The Magic Will Show Here 🌎</span>
+      </div>
+      <div id="other_countries" class="other-countries-container">
+         <span>Other Countries in the Region will show here 🗺</span>
+      </div>
+   </div>
+   <script src="./script-countries.js"></script>
+</body>
+</html>
