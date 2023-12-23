@@ -1,88 +1,89 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 * {
-  font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #121212;
-  margin: 0;
-  padding: 0;
-  animation: pulsate 2s ease-in-out infinite;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    animation: pulsate 2s ease-in-out infinite;
 }
 
 @keyframes pulsate {
-  0% {
-    background-color: #121212;
-  }
-  50% {
-    background-color: #1e1e1e;
-  }
-  100% {
-    background-color: #121212;
-  }
+    0% {
+        background-color: #121212;
+    }
+    50% {
+        background-color: #1e1e1e;
+    }
+    100% {
+        background-color: #121212;
+    }
 }
 
 .navbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: max-content;
-  height: 70px;
-  border-radius: 0 20px;
-  padding: 0 20px;
-  box-shadow: none;
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  gap: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: max-content;
+    height: 70px;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .navbar a {
-  font-size: 19px;
-  color: #f2f2f2;
-  text-decoration: none;
-  font-weight: 500;
+    font-size: 19px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .navbar a:hover {
-  color: #ddd;
+    color: #ddd;
 }
 
 .info-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  max-width: auto;
-  margin: 5rem auto;
-  padding: 20px;
-  box-sizing: border-box;
-  color: #ffffff;
-  border-radius: 20px;
-  background-color: #1e1e1f;
-  border: 1px solid #383838;
-  margin-right: 10px;
-  margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: auto;
+    margin: 5rem auto;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #1e1e1f;
+    border: 1px solid #383838;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .info-content {
-  text-align: left;
+    text-align: left;
 }
 
 .title {
-  font-size: 50px;
-  margin-bottom: 10px;
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-  font-style: italic;
-  color: #fcff70;
+    font-style: italic;
+    color: #fcff70;
 }
 
 .journal-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     max-width: auto;
     margin: 5rem auto;
@@ -93,13 +94,7 @@ body {
     background-color: #1e1e1f;
     border: 1px solid #383838;
     margin-right: 10px;
-    margin-left: 10px;   
-}
-
-.journal-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 10px;
 }
 
 .journal-content {
@@ -109,45 +104,44 @@ body {
 
 .content-image {
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
 
-
 .fade-paragraph {
-  opacity: 0;
-  transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
 }
 
 .faded-in {
-  opacity: 1;
+    opacity: 1;
 }
 
 .quote {
-  margin-top: 3rem;
-  font-weight: 600;
-  font-size: 32px;
-  font-style: italic;
-  color: #fcff70;
+    margin-top: 3rem;
+    font-weight: 600;
+    font-size: 32px;
+    font-style: italic;
+    color: #fcff70;
 }
 
 .attribution {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #ffffff;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 600px) {
-  .navbar {
-    position: static;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-  }
+    .navbar {
+        position: static;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
 
-  .navbar a {
-    font-size: 10px;
-  }
+    .navbar a {
+        font-size: 10px;
+    }
 }
