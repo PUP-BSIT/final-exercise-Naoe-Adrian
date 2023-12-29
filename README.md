@@ -18,7 +18,7 @@ This site powered by: <br>
 
 ### Let's Connect! 🌐
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-AdrianNaoe-blue?style=for-the-badge&logo=linkedin)](www.linkedin.com/in/adriannaoe)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-AdrianNaoe-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/adriannaoe/)
 [![GitHub](https://img.shields.io/badge/GitHub-Naoe--Adrian-green?style=for-the-badge&logo=github)](https://github.com/Naoe-Adrian)
 
 
