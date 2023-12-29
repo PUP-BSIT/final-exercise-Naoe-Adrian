@@ -98,31 +98,19 @@ function displayComments() {
   const commentsContainer = document.querySelector("#comments_dynamic");
   commentsContainer.innerHTML = "";
 
-  fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      for (const commentId in data) {
-        const comment = data[commentId];
-        const commentDiv = document.createElement("div");
-        commentDiv.classList.add("comments_dynamic");
-        commentDiv.innerHTML =
-          `<p>
-              <strong>${comment.name}</strong> - ${comment.dateTime}
-          </p>
-          <p>
-              <em>${comment.comment}</em>
-          </p>`;
-        commentsContainer.appendChild(commentDiv);
-      }
-    })
-    .catch((error) => {
-      console.error("Error retrieving comments:", error.message);
-    });
+  for (const commentId in commentData) {
+    const comment = commentData[commentId];
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comments_dynamic");
+    commentDiv.innerHTML =
+      `<p>
+          <strong>${comment.name}</strong> - ${comment.dateTime}
+      </p>
+      <p>
+          <em>${comment.comment}</em>
+      </p>`;
+    commentsContainer.appendChild(commentDiv);
+  }
 }
 
 function sortComments() {
@@ -169,5 +157,3 @@ function displaySortedComments(sortedComments) {
     commentsContainer.appendChild(commentDiv);
   });
 }
-
-
