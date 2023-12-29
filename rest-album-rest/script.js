@@ -1,5 +1,5 @@
-const apiUrl = "https://projectvrzn.online/api/naoe_back_end.php";
-  
+const apiUrl = "https://album-rest-default-rtdb.asia-southeast1.firebasedatabase.app/album-list";
+
 document.addEventListener("DOMContentLoaded", () => {
   readAlbums();
 
@@ -65,17 +65,14 @@ function createAlbum() {
     language: document.querySelector("#language").value,
     track_number: document.querySelector("#num_tracks").value,
     genre: document.querySelector("#genre").value,
-    action: "POST",
   };
 
-  let formData = new FormData();
-  for (const key in albumData) {
-    formData.append(key, albumData[key]);
-  }
-
-  fetch(apiUrl, {
+  fetch(`${apiUrl}.json`, {
     method: "POST",
-    body: formData,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(albumData),
   })
     .then((response) => response.json())
     .then((data) => {
@@ -83,29 +80,26 @@ function createAlbum() {
     })
     .catch((error) => {
       console.error("Error creating album:", error.message);
-      handleResponse({ message: "Error creating album. Please try again." });
+      handleResponse({ message: "Error creating. Please try again." });
     });
 }
 
 function performUpdate() {
+  let albumId = document.querySelector("#album_id").value;
   let albumData = {
-    albumId: document.querySelector("#album_id").value,
     album_name: document.querySelector("#album_name").value,
     artist: document.querySelector("#artist").value,
     language: document.querySelector("#language").value,
     track_number: document.querySelector("#num_tracks").value,
     genre: document.querySelector("#genre").value,
-    action: "PATCH",
   };
 
-  let formData = new FormData();
-  for (const key in albumData) {
-    formData.append(key, albumData[key]);
-  }
-
-  fetch(apiUrl, {
-    method: "POST",
-    body: formData,
+  fetch(`${apiUrl}/${albumId}.json`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(albumData),
   })
     .then((response) => response.json())
     .then((data) => {
@@ -113,49 +107,32 @@ function performUpdate() {
     })
     .catch((error) => {
       console.error("Error updating album:", error.message);
-      handleResponse({ message: "Error updating album. Please try again." });
+      handleResponse({ message: "Error updating. Please try again." });
     });
 }
-
 
 function deleteAlbum(albumId) {
-  let albumData = {
-    albumId: albumId,
-    action: "DELETE",
-  };
-
-  let formData = new FormData();
-  for (const key in albumData) {
-    formData.append(key, albumData[key]);
-  }
-
-  fetch(apiUrl, {
-    method: "POST",
-    body: formData,
+  fetch(`${apiUrl}/${albumId}.json`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
   })
-    .then((response) => response.json())
-    .then((data) => {
-      handleResponse(data);
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
     })
+    .then(() => readAlbums())
     .catch((error) => {
-      console.error("Error deleting album:", error.message);
-      handleResponse({ message: "Error deleting album. Please try again." });
+      console.error("Error deleting album:", error);
+      handleResponse({ message: "Error deleting. Please try again." });
     });
 }
 
-function handleResponse(data) {
-  let outputElement = document.querySelector("#output");
-  if (outputElement) {
-    outputElement.innerHTML = data.message;
-  }
-
-  readAlbums();
-  resetForm();
-}
-
-
 function readAlbums() {
-  fetch(apiUrl)
+  fetch(`${apiUrl}.json`)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -167,7 +144,8 @@ function readAlbums() {
       if (tableBody) {
         tableBody.innerHTML = "";
 
-        data.forEach((album) => {
+        for (const albumId in data) {
+          let album = data[albumId];
           let row = tableBody.insertRow();
           let cell0 = row.insertCell(0);
           let cell1 = row.insertCell(1);
@@ -175,30 +153,28 @@ function readAlbums() {
           let cell3 = row.insertCell(3);
           let cell4 = row.insertCell(4);
           let cell5 = row.insertCell(5);
-          let cell6 = row.insertCell(6);
 
-          cell0.innerHTML = album.id || ''; 
-          cell1.innerHTML = (album.album_name || '').toUpperCase();
-          cell2.innerHTML = (album.artist || '').toUpperCase();
-          cell3.innerHTML = album.language || '';
-          cell4.innerHTML = album.track_number || '';
-          cell5.innerHTML = album.genre || '';
+          cell0.innerHTML = (album.album_name || '').toUpperCase();
+          cell1.innerHTML = (album.artist || '').toUpperCase();
+          cell2.innerHTML = album.language || '';
+          cell3.innerHTML = album.track_number || '';
+          cell4.innerHTML = album.genre || '';
 
           let updateButton = document.createElement("button");
           updateButton.textContent = "Update";
           updateButton.onclick = function () {
-            updateAlbum(album);
+            updateAlbum(album, albumId);
           };
 
           let deleteButton = document.createElement("button");
           deleteButton.textContent = "Delete";
           deleteButton.onclick = function () {
-            deleteAlbum(album.id);
+            deleteAlbum(albumId);
           };
 
-          cell6.appendChild(updateButton);
-          cell6.appendChild(deleteButton);
-        });
+          cell5.appendChild(updateButton);
+          cell5.appendChild(deleteButton);
+        }
       }
 
       let outputElement = document.querySelector("#output");
@@ -211,15 +187,14 @@ function readAlbums() {
     });
 }
 
-
-function updateAlbum(album) {
+function updateAlbum(album, albumId) {
   document
     .querySelector("#language")
     .removeEventListener("change", validateForm);
   document.querySelector("#genre")
     .removeEventListener("change", validateForm);
 
-  document.querySelector("#album_id").value = album.id;
+  document.querySelector("#album_id").value = albumId;
   document.querySelector("#album_name").value = album.album_name;
   document.querySelector("#artist").value = album.artist;
   document.querySelector("#language").value = album.language;
@@ -236,6 +211,16 @@ function updateAlbum(album) {
     .addEventListener("change", validateForm);
   document.querySelector("#genre")
     .addEventListener("change", validateForm);
+}
+
+function handleResponse(data) {
+  let outputElement = document.querySelector("#output");
+  if (outputElement) {
+    outputElement.innerHTML = data.message;
+  }
+
+  readAlbums();
+  resetForm();
 }
 
 function resetForm() {
